@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page</h1>
+    <h2>Author name : {{Author}}</h2>
+    <h2>Author Age : {{Age}}</h2>
+    <h2>Author roll : {{lst}}</h2>
+
+
+    {% comment %} Conditional Statement  {% endcomment %}
+
+
+    {% if Age > 20 %}
+        <h3>You will get driving license</h3>
+    {% elif Age > 10 %}
+        <h3>You will not get driving license</h3>
+    {% else %}
+        <h3>You are child</h3>
+    {% endif %}
+
+    {{lst}}
+    <h1>{{lst | join:" - "}}</h1>
+    <h2>{{birthday}}</h2>
+
+    {% comment %} convert time  {% endcomment %}
+    <h2>{{ birthday | date:"D d M Y" }}</h2>
+     
+    {% comment %} cut any character or space from string  {% endcomment %}
+    <h1>{{"Python is Fun" | cut:"n"}}</h1> 
+
+    {% comment %} sort by name in Django  {% endcomment %}
+    <h2>{{lst | linenumbers}} </h2>
+
+
+    {% comment %} Use loop in Django  {% endcomment %}
+    {% for i in courses%}
+        <h3>{{i.id}} {{i.name}} {{i.description}}</h3>
+    {% endfor %}
+</body>
+</html>
