@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="/">Home</a></h1>
+    <h1><a href="/firstApp/contact/">Contact</a></h1>
+    <h1><a href="/firstApp/about/">About</a></h1>
+    <h1><a href="/firstApp/filtering/">filtering</a></h1>
+
+    {% comment %} check lenth of a list  {% endcomment %}
+    <h3>{{lst | length}}</h3>
+
+    {% comment %} add value  {% endcomment %}
+    <h3> {{age | add:"5"}} </h3>
+    <h3> {{"alamgir" | capfirst}} </h3>
+
+    {% comment %} It is used to remove all values of arg from the given string {% endcomment %}
+    <h4> {{name | cut:" "}} </h4>
+
+    {% comment %} date time convert  {% endcomment %}
+    <h3>{{birthdate | date:"D d M Y"}} </h3>
+
+    {% comment %} set nothing or else  {% endcomment %}
+    <h3>{{empty | default:"nothing here"}} </h3>
+
+    {% comment %} sort array  {% endcomment %}
+    <h4>{{arr | dictsort:"age"}} </h4>
+    <h5>{{age | divisibleby:"2"}} </h5>
+
+    {% comment %} first element of the array  {% endcomment %}
+    <h6>{{lst | first}} </h6>
+
+    {% comment %} join a string  {% endcomment %}
+    <h1>{{lst | join:" - "}} </h1>
+
+    {% comment %} <h5>{{ name age | linenumbers}} </h5> {% endcomment %}
+
+    <h5>{{name | upper}} </h5>
+    <h5>{{name | lower}} </h5>
+
+    <h1>{{2341 | make_list}} </h1>
+
+    <h3>{{chars | slice:"2"}} </h3>
+
+    <h1>{{birthdate | time:"H:i"}} </h1>
+
+    <h2>{{"mY fIrst poSt" | title}} </h2>
+
+    <h1>{{unorder_lst | unordered_list}} </h1>
+
+    <h1>{{name | wordcount}} </h1>
+
+    <h1>{{name | truncatechars:7}} </h1>
+
+
+
+    <h3>This is filtering page</h3>
+</body>
+</html>
